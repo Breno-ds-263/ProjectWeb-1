@@ -1,0 +1,146 @@
+.footer{
+    display: grid;
+    grid-area: footer;
+    align-content: center;
+    background-color: var(--cor-secundaria);
+    padding: 3rem 2rem;
+    justify-items: start;
+    align-items: start;
+    margin-top: 2rem;
+    width: auto;
+}
+
+.footerContent{
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.1fr 0.5fr;
+    grid-template-areas: 
+                "sobremim links-rapidos redes"
+                "linhaMaior linhaMaior linhaMaior"
+                "copy copy copy";
+}
+
+footer > div{
+    flex: 1;
+}
+
+footer h3{
+    color: #FFF;
+    margin: 0;
+}
+
+footer a, .sobremim p {
+    text-decoration: none;
+    color: var(--texto-cinza);
+}
+
+
+.linha{
+    border: 2px solid var(--cor-primaria);
+    width: 45px;
+    margin: 0.5rem 0 1rem 0;
+}
+
+#linhaMaior{
+    border: 1px solid var(--texto-cinza);
+    max-width: 1200px;
+    grid-area: linhaMaior;
+    margin-top: 1rem;
+}
+
+.sobremim{
+    grid-area: sobremim;
+}
+
+.links-rapidos{
+    grid-area: links-rapidos;
+    display: flex;
+    flex-direction: column;
+}
+
+.links-rapidos a{
+    width: max-content;
+}
+
+.links-rapidos a:hover{
+    transform: translate(1rem, 0);
+    transition: transform 0.5s ease;
+    color: var(--cor-primaria);
+}
+
+.icones{
+    font-size: 1rem;
+    color: #FFF;
+}
+
+.redes{
+    grid-area: redes;
+}
+
+.area-icones{
+    display: flex;
+    gap: var(--gap-padrao);
+}
+
+.area-icones .bola{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--texto-cinza);
+    border-radius: 50px;
+}
+
+.bola:hover{
+    transform: translate(0, -0.2rem);
+    transition: transform 0.5s ease;
+    background-color: var(--cor-primaria);
+}
+
+.copy{
+    display: flex;
+    place-self: center;
+    grid-area: copy;
+    color: var(--texto-cinza);
+}
+
+@media (max-width: 768px) {
+    .footerContent {
+        width: 100%;
+        padding: 0 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "sobremim sobremim"
+            "links-rapidos redes"
+            "linhaMaior linhaMaior"
+            "copy copy";
+        row-gap: 2rem;
+    }
+
+    #linhaMaior {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .footerContent {
+        width: 100%;
+        padding: 0 1rem;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "sobremim"
+            "links-rapidos"
+            "redes"
+            "linhaMaior"
+            "copy";
+        row-gap: 2rem;
+    }
+
+    #linhaMaior {
+        width: 100%;
+    }
+}
