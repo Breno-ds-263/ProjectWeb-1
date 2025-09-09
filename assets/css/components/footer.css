@@ -38,8 +38,8 @@ footer a, .sobremim p {
 
 
 .linha{
-    border: 2px solid var(--cor-primaria);
-    width: 45px;
+    border: 1px solid var(--cor-primaria-escura);
+    width: 19rem;
     margin: 0.5rem 0 1rem 0;
 }
 
@@ -90,8 +90,9 @@ footer a, .sobremim p {
     align-items: center;
     width: 2rem;
     height: 2rem;
-    background-color: var(--texto-cinza);
+    background-color: var(--cor-secundaria);
     border-radius: 50px;
+    
 }
 
 .bola:hover{

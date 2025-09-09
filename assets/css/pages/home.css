@@ -1,0 +1,142 @@
+.container {
+    width: auto;
+    margin: 0 auto; 
+}
+
+.hero {
+    background-color: var(--Fundo-hero);
+    padding: 2rem;
+    padding-bottom: 3rem;
+}
+
+.heroContent-imagem {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.heroContent-imagem img {
+    width: 11rem;
+}
+
+.heroContent {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "content profile";
+    gap: 2rem; 
+    margin: auto;
+}
+
+.skillsContent {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "mySkills mySkills mySkills"
+        "devWeb UIUX mobile";
+    gap: 2rem;
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 1rem;
+}
+
+.content p {
+    font-weight: bold;
+    font-size: clamp(1rem, 1vw, 1.25rem);
+}
+
+.content h2 {
+    font-size: clamp(1.5rem, 1.5vw, 2.5rem);
+}
+
+#mySkills {
+    display: flex;
+    grid-area: mySkills;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-secundaria);
+}
+
+.devWeb {
+    grid-area: devWeb;
+}
+
+.UIUX {
+    grid-area: UIUX;
+}
+
+.mobile {
+    grid-area: mobile; 
+}
+
+
+
+@media (max-width: 992px) {
+    .heroContent {
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+            "content"
+            "profile";
+        text-align: center;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    .heroContent-imagem {
+        justify-content: center;
+    }
+
+    .heroContent-imagem img {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .skillsContent {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "mySkills mySkills"
+            "devWeb UIUX"
+            "mobile mobile";
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .heroContent {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "content"
+            "profile";
+        text-align: center;
+    }
+
+    .heroContent-imagem img {
+        display: none;
+    }
+
+    .skillsContent {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "mySkills"
+            "devWeb"
+            "UIUX"
+            "mobile";
+        width: 100%;
+    }
+
+    .content {
+        align-items: center;
+    }
+}

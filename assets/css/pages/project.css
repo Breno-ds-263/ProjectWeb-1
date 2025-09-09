@@ -137,6 +137,7 @@
     grid-area: image3;
     width: 100%;
     max-width: 15rem;
+    height: 150px;
 }
 
 #image4{
